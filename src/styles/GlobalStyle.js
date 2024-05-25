@@ -36,4 +36,33 @@ body{
 }
 
 
+:root{
+    --fontBig: 7em;
+    --fontxxxl: 5.5em; 
+    --fontxxl: 3.4375em; 
+    --fontxl: 2.75em; 
+    --fontlg: 1.9375em; 
+    --fontmd: 1.375em; 
+    --fontsm: 1.125em; 
+    --fontxs: 1em;
+    --fontxxs: 0.75em; 
+
+
+  // Colors
+    --dark: #000000;
+    --grey: #666666;
+    --greyLight: #979797;
+    --offWhite: #eeeeee;
+    --white: #ffffff;
+    --blue: #0071e3;
+    --blueRgba:"0, 113, 227";
+
+  //fonts
+    --fontL: "Source Sans Pro light";
+    --fontR: "Source Sans Pro";
+    
+  // gradient
+    --gradient: #35c3f3 0%, #8b9fe8 20%, #e681d8 39%, #ffa9a4 76%, #fed2ce 100%;
+
+
 `
