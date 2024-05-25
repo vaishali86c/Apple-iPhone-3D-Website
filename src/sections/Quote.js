@@ -63,6 +63,7 @@ span{
     text-align: end;
     background-image: linear-gradient(-180deg, var(--gradient));
 }
+
 `
 
 
