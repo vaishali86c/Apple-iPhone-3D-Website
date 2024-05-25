@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 import "../styles/GlobalStyle"
 
 const Section = styled.section`
@@ -29,15 +30,42 @@ color: var(--white);
 
 `
 
+const moveup = keyframes`
+
+100%{
+    transform: translateY(0);
+}
+
+`
+
+const Text = styled.p`
+
+width: 50%;
+font-size: var(--fontlg);
+position: relative;
+height: var(--fontmd);
+overflow: hidden;
+
+span{
+    position: absolute;
+    transform: translateY(3rem);
+    animation-name: ${moveup};
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+}
+
+`
+
+
 const Quote = () => {
     return (
         <Section>
             <TextContainer>
-                <span>line-1</span>
-                <span>line-2</span>
-                <span>line-3</span>
-                <span>line-4</span>
-                <span>line-5</span>
+                <Text><span>line-1</span></Text>
+                <Text><span>line-2</span></Text>
+                <Text><span>line-3</span></Text>
+                <Text><span>line-4</span></Text>
+                <Text><span>line-5</span></Text>
             </TextContainer>
         </Section>
     );
