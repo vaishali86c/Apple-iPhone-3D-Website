@@ -1,4 +1,7 @@
+import { useRef } from "react";
 import styled from "styled-components";
+import gsap from "gsap";
+import { useLayoutEffect } from "react";
 
 const Section = styled.section`
 
@@ -40,14 +43,40 @@ li{
     background-color: var(--dark);
     background-image: linear-gradient(-90deg, var(--gradient));
     margin: 0.5rem 0;
+    opacity: 0;
 
+}
+
+&>*:not(:first-child):not(:last-child) {
+    margin: 0.5rem 0;
 }
 `
 const BatterySection = () => {
+
+    const battery = useRef(null);
+    let elements = gsap.utils.selector(battery);
+
+    useLayoutEffect(() => {
+        let t1 = gsap.timeline({});
+        elements("li").forEach(el => {
+            t1.to(el,{
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top center",
+                    end: "bottom center",
+                    scrub: true,
+                    markers: true,
+                }, opacity: 1
+            })
+        })
+        return () => {
+
+        }
+    }, [])
     return (
         <Section>
             <Title>Go all day with single charge...</Title>
-            <Battery>
+            <Battery ref={battery}>
                 <li />
                 <li />
                 <li />
