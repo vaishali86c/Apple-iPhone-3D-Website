@@ -93,7 +93,10 @@ const ProcessorSection = () => {
             <img src={a15} alt="A15 Processor" />
             </Processor>
             <Text>
-                <span>Lorem djkdhjk ajdjadv akdj fkjjjjjj jfffffff jdsdsdsd    dsd</span>
+                <span>Lorem djkdhjk ajdjadv akdj fkjjjjjj jfffffff jdsdsdsd  dsd ddddswww</span>
+            </Text>
+            <Text>
+                <span>Lorem djkdhjk ajdjadv akdj fkjjjjjj jfffffff jdsdsdsd  dsd fkfkjshd</span>
             </Text>
         </Sections>
     )
