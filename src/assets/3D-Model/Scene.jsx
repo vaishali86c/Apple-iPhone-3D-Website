@@ -10,7 +10,6 @@ Title: Apple iPhone 13 Pro Max
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import gsap from 'gsap'
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { useLayoutEffect } from 'react';
 import { useThree } from 'react-three-fiber';
 
