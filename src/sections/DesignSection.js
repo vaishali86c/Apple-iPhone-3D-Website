@@ -1,6 +1,8 @@
 import React from "react";
 import { useRef } from "react";
 import styled from "styled-components";
+import gsap from "gsap";
+import { useLayoutEffect } from "react";
 
 const Section = styled.section`
 
@@ -59,14 +61,27 @@ span {
 }
 `
 
-
 const DesignSection = () => {
 
     const container = useRef(null);
     const textOne = useRef(null);
     const textTwo = useRef(null);
 
+    useLayoutEffect(() => {
+        let t1 = gsap.timeline({
+            scrollTrigger:{
+                trigger: container.current,
+                start: "top-=500 top",
+                end: "bottom top",  
+                scrub: true,
+            }
+        }).fromTo(textOne.current, {x:0}, {x:"10%"}, "key1").fromTo(textTwo.current, {x:0}, {x:"-10%"}, "key1")
 
+        return () => {
+            if(t1) t1.kill();
+        };
+
+    }, [])
 
     return (
         <Section ref={container}>
