@@ -77,18 +77,19 @@ const Quote = () => {
     const sectionRef = useRef(null);
 
     useLayoutEffect(() => {
-        let Elem = sectionRef.current;
-        let trigger = ScrollTrigger.create({
-            trigger: Elem,
-            start: "top top",
-            pin: true,
-            pinSpacing: false,
-        });
+    let Elem = sectionRef.current;
 
-        return() =>{
-            if (trigger) trigger.kill();
-        }
-    }, [])
+    let trigger = ScrollTrigger.create({
+        trigger: Elem,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+    });
+
+    return () => {
+        if (trigger) trigger.kill();
+    };
+    }, []);
 
     return (
         <Section ref={sectionRef}>

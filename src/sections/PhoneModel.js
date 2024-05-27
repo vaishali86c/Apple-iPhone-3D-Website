@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 import { Model } from "../assets/3D-Model/Scene";
 import { Suspense } from "react";
 
@@ -19,7 +19,7 @@ background-color: transparent;
 
 const PhoneModel = () => {
     return (
-        <Container>
+        <Container id="phone-model">
             <Canvas camera={{fov: 14}}>  
             <ambientLight intensity={1.25} />
             <directionalLight intensity={0.4} />
